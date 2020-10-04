@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
-import uno from '../imgs/1.jpg';
+import uno from '../static/imgs/1.jpg';
 
 export interface ISearchBar
   extends StateProps,

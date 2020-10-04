@@ -4,11 +4,11 @@ import {
   Button,
   Carousel
 } from "react-bootstrap";
-import img2 from "../imgs/2.jpg";
-import img3 from "../imgs/3.jpg";
-import img4 from "../imgs/4.jpg";
-import img5 from "../imgs/5.jpg";
-import img6 from "../imgs/6.jpg";
+import img2 from "../static/imgs/2.jpg";
+import img3 from "../static/imgs/3.jpg";
+import img4 from "../static/imgs/4.jpg";
+import img5 from "../static/imgs/5.jpg";
+import img6 from "../static/imgs/6.jpg";
 
 
 

@@ -53,3 +53,31 @@ html, body{
   width:100%;
   width:400px;
 }
+
+.card-text{
+  font-size:0.9rem;
+  padding:0.4rem 1.9rem;
+}
+
+.card:focus,
+.card:hover {
+  /* box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);  */
+ /*  fill: #ffffff; */
+  opacity: 0.2;
+}
+
+.black{
+  background-color: black;
+}
+
+ div a {
+  color:#FFFFFF;
+}
+
+ div a:hover {
+  color: black;
+}
+
+.colorfoo {
+  background-color: #FBFCFC;
+}

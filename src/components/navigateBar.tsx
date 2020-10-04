@@ -4,26 +4,42 @@ import {
   Nav,
   Form,
   FormControl,
-  Button
+  Button,
+  NavDropdown,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSearch,
+  faHeart,
+  faShoppingBag,
+} from "@fortawesome/free-solid-svg-icons";
 
-export interface INavigateBar
-  extends StateProps,
-    DispatchProps {}
+export interface INavigateBar extends StateProps, DispatchProps {}
 
 const NavigateBar: React.FunctionComponent<INavigateBar> = (props) => {
   return (
     <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Home</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#home">Shop</Nav.Link>
-      <Nav.Link href="#features">New Arrivals</Nav.Link>
-      <Nav.Link href="#pricing">Products</Nav.Link>
-      <Nav.Link href="#pricing">Brand</Nav.Link>
-      <Nav.Link href="#pricing">Blog</Nav.Link>
-      <Nav.Link href="#pricing">Contact</Nav.Link>
-    </Nav>
-  </Navbar>
+      <Nav className="mr-auto ml-5">
+      <Nav.Link href="#Shop">Home</Nav.Link>
+        <Nav.Link href="#Shop">Shop</Nav.Link>
+        <Nav.Link href="#New-Arrivals">New Arrivals</Nav.Link>
+        <Nav.Link href="#Products">Products</Nav.Link>
+        <Nav.Link href="#Brand">Brand</Nav.Link>
+        <Nav.Link href="#Blog">Blog</Nav.Link>
+        <Nav.Link href="#Contact">Contact</Nav.Link>
+      </Nav>
+      <Nav className="mr-auto">
+        <FontAwesomeIcon icon={faShoppingBag} size="3x" className="ml-5" />
+        &nbsp; &nbsp;
+        <p>
+          Cart items (3) <br />
+          Total: $345
+        </p>
+        <NavDropdown title="" id="collasible-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Products</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+    </Navbar>
   );
 };
 

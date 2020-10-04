@@ -1,10 +1,10 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import img2 from "../imgs/2.jpg";
-import img3 from "../imgs/3.jpg";
-import img4 from "../imgs/4.jpg";
-import img5 from "../imgs/5.jpg";
-import img6 from "../imgs/6.jpg";
+import img2 from "../static/imgs/2.jpg";
+import img3 from "../static/imgs/3.jpg";
+import img4 from "../static/imgs/4.jpg";
+import img5 from "../static/imgs/5.jpg";
+import img6 from "../static/imgs/6.jpg";
 
 export interface ISearchBar extends StateProps, DispatchProps {}
 
@@ -12,19 +12,19 @@ const Gallery1: React.FunctionComponent<ISearchBar> = (props) => {
   return (
     <div>
       <div className="row">
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-4 d-flex align-items-stretch">
-          <Card className="bg-dark text-white d-flex align-items-stretch">
+        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-4 ">
+          <Card className="bg-dark text-white">
             <Card.Img src={img2} className="imgXs" alt="Card image" />
             <Card.ImgOverlay>
               <br />
               <br />
               <br />
-                <div className="card-body">
+                <div>
                   <h3>Fast Same day Delivery</h3>
                   <h1>BIRTHDAY FLOWERS</h1>
                   <h2>Gerbera</h2>
-                  <Button variant="secondary">SHOP NOW</Button>
               </div>
+                  <Button variant="secondary">SHOP NOW</Button>
             </Card.ImgOverlay>
           </Card>
         </div>
@@ -48,7 +48,7 @@ const Gallery1: React.FunctionComponent<ISearchBar> = (props) => {
             <Card.ImgOverlay>
               <br />
               <br />
-              <div>
+              <div className="container-responsive">
                 <h2>Rose</h2>
                 <h1>FLOWER BOUQUET</h1>
                 <h3>50% OFF</h3>
