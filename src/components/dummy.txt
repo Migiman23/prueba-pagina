@@ -1,0 +1,164 @@
+import React, { useState } from "react";
+import { Card, Button, Carousel, CardDeck } from "react-bootstrap";
+import img7 from "../static/imgs/7.jpg";
+import img8 from "../static/imgs/8.jpg";
+import img9 from "../static/imgs/9.jpg";
+import img10 from "../static/imgs/10.jpg";
+import img11 from "../static/imgs/11.jpg";
+import img12 from "../static/imgs/12.jpg";
+
+export interface IGifts extends StateProps, DispatchProps {}
+
+const Gifts: React.FunctionComponent<IGifts> = (props) => {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+  
+  const products = [
+    {
+        "id": 234,
+        "name": "Same day Delivery",
+        "price": 450,
+        "specialPrice": 250,
+        "imagen": {img7}     
+    },
+    {
+        "id": 237,
+        "name": "Basket of Gladness",
+        "price": 99,
+        "specialPrice": 70,
+        "imagen": {img8}     
+    },
+    {
+        "id": 236,
+        "name": "Triple Pleasures",
+        "price": 290,
+        "specialPrice": 110,
+        "imagen": {img9}       
+    },
+    {
+        "id": "235",
+        "name": "Tulip Flower Bouquet",
+        "price": 110,
+        "specialPrice": 50,
+        "imagen": {img10}         
+    }
+];
+
+  return (
+    <div className="container">
+      <br />
+      <h2>BEST SELLING FLOWERS & GIFTS</h2>
+      <br />
+      <div className="col-lg-4 center">
+      <Carousel>
+      <Carousel.Item >
+        <Card>
+          <Card.Img variant="top" src={img7} />
+          <Card.Body>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Same day Delivery 
+                  </div>
+                <div className="col-lg-6 right">
+                      $250
+                  </div>   
+              </div>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Wedding Flower 
+                  </div>
+                <div className="col-lg-6 right">
+                      $450
+                  </div>   
+              </div>
+          </Card.Body>
+        </Card>
+        </Carousel.Item>
+        <Carousel.Item>
+        <Card>
+          <Card.Img variant="top" src={img8} />
+          <Card.Body>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Tulip Flower Bouquet 
+                  </div>
+                <div className="col-lg-6 right">
+                      $50
+                  </div>   
+              </div>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Bouquet
+                  </div>
+                <div className="col-lg-6 right">
+                      $110
+                  </div>   
+                  <div className="col-lg-6 left">
+                      Add To Cart
+                  </div>
+              </div>
+          </Card.Body>
+        </Card>
+        </Carousel.Item>
+        <Carousel.Item >
+        <Card>
+          <Card.Img variant="top" src={img9} />
+          <Card.Body>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Triple Pleasures
+                  </div>
+                <div className="col-lg-6 right">
+                      $110
+                  </div>   
+              </div>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Wedding Flower 
+                  </div>
+                <div className="col-lg-6 right">
+                      $290
+                  </div>   
+              </div>
+          </Card.Body>
+        </Card>
+        </Carousel.Item>
+        <Carousel.Item >
+        <Card>
+          <Card.Img variant="top" src={img10} />
+          <Card.Body>
+              < div className="row">
+                <div className="col-lg-6 left">
+                     Basket of Gladness
+                  </div>
+                <div className="col-lg-6 right">
+                      $70
+                  </div>   
+              </div>
+              < div className="row">
+                <div className="col-lg-6 left">
+                      Flower Bouquet
+                  </div>
+                <div className="col-lg-6 right">
+                      $90
+                  </div>   
+              </div>
+          </Card.Body>
+        </Card>
+      </Carousel.Item>
+      </Carousel>
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = () => ({});
+const mapDispatchToProps = {};
+
+type StateProps = ReturnType<typeof mapStateToProps>;
+type DispatchProps = typeof mapDispatchToProps;
+
+export default Gifts;

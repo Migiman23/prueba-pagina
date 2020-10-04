@@ -34,8 +34,8 @@ export interface IGifts extends StateProps, DispatchProps {}
 const Gifts: React.FunctionComponent<IGifts> = (props) => {
   return (
     <div>
-      <div className="content colorfoo">
-        <h4 className="left ml-5">BRANDS</h4>
+      <div className="content colorfoo" >
+        <h4 className="left ml-5 font-face">BRANDS</h4>
         <br />
         <br />
         <div className="row">
@@ -59,7 +59,7 @@ const Gifts: React.FunctionComponent<IGifts> = (props) => {
 
       <Navbar bg="dark" variant="dark">
         <Container>
-          <div className="row text-white">
+          <div className="row text-white font-face">
             <div className="col-xl-1 col-lg-1"> </div>
             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 left">
               <br />
@@ -205,7 +205,7 @@ const Gifts: React.FunctionComponent<IGifts> = (props) => {
           <div className="col-lg-1"></div>
           <div className="col-lg-11">
             <br />
-            <h5> Copyright © 2018. Company All Rights Reserved </h5>
+            <h5 className="font-face"> Copyright © 2018. Company All Rights Reserved </h5>
             <br />
           </div>
         </div>

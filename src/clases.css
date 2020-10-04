@@ -81,3 +81,17 @@ html, body{
 .colorfoo {
   background-color: #FBFCFC;
 }
+.fondoblanco {
+  background-color: #FFFFFF;
+}
+
+.font-face {
+  font-family: 'MyFont';/* , Arial, sans-serif; */
+  src: local('MyFont'), url(./static//fonts//Raleway/Raleway-VariableFont_wght.ttf) format('ttf');
+}
+.tachado{
+  text-decoration:line-through;
+}
+.opaco{
+  opacity: 0.5;
+}

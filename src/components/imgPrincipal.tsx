@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Navbar,
   Nav,
@@ -9,30 +9,32 @@ import {
 } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import { Image } from "semantic-ui-react";
-import uno from '../static/imgs/1.jpg';
+import uno from "../static/imgs/1.jpg";
+import dos from "../static/imgs/5.jpg";
+import tres from "../static/imgs/6.jpg";
 
-export interface ISearchBar
-  extends StateProps,
-    DispatchProps {}
+export interface ISearchBar extends StateProps, DispatchProps {}
 
 const ImgPrin: React.FunctionComponent<ISearchBar> = (props) => {
-    const responsive = {
-        desktop: {
-          breakpoint: { max: 1920, min: 1024 },
-          items: 1,
-          slidesToSlide: 1 // optional, default to 1.
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 1,
-          slidesToSlide: 1 // optional, default to 1.
-        },
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1,
-          slidesToSlide: 1 // optional, default to 1.
-        }
-      };
+  const [lista, setLista] = useState([]);
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 1920, min: 1024 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
   /*     const images = [
         "https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         "https://images.unsplash.com/photo-1549396535-c11d5c55b9df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
@@ -48,27 +50,37 @@ const ImgPrin: React.FunctionComponent<ISearchBar> = (props) => {
         "https://images.unsplash.com/photo-1550064824-8f993041ffd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
       ]; */
 
+  useEffect(() => {
+    let lista2 = [];
+    lista2.push(uno);
+    lista2.push(dos);
+    lista2.push(tres);
+    setLista(lista2);
+    /* console.log(lista2); */
+  }, []);
+
   return (
-  <Carousel
-  //className="img"
-  swipeable={false}
-  draggable={false}
-  showDots={true}
-  responsive={responsive}
-  ssr={true} // means to render carousel on server-side.
-  infinite={true}
-  autoPlay= {true}
-  autoPlaySpeed={3000}
-  keyBoardControl={true}
-  customTransition="all .9"
-  transitionDuration={500}
-  containerClass="carousel-container"
-  removeArrowOnDeviceType={["tablet", "mobile"]}
-  //deviceType={props.deviceType}
-  dotListClass="custom-dot-list-style"
-  itemClass="carousel-item-padding-40-px"
->
-{/* {img.map(image => {
+    <Carousel
+      //className="img"
+      swipeable={false}
+      draggable={false}
+      showDots={true}
+      responsive={responsive}
+      ssr={true} // means to render carousel on server-side.
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={3000}
+      keyBoardControl={true}
+      customTransition="all .9"
+      transitionDuration={500}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      //deviceType={props.deviceType}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {lista.map((image) => {
+       /*  console.log(image); */
         return (
           <Image
             draggable={false}
@@ -76,13 +88,13 @@ const ImgPrin: React.FunctionComponent<ISearchBar> = (props) => {
             src={image}
           />
         );
-      })} */}
-       <Image
+      })}
+      {/*  <Image
             draggable={false}
             style={{ width: "100%", height: "100%" }}
             src={uno}
-          />
-</Carousel>
+          /> */}
+    </Carousel>
   );
 };
 

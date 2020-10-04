@@ -18,8 +18,8 @@ export interface INavigateBar extends StateProps, DispatchProps {}
 
 const NavigateBar: React.FunctionComponent<INavigateBar> = (props) => {
   return (
-    <Navbar bg="light" variant="light">
-      <Nav className="mr-auto ml-5">
+    <Navbar bg="light" variant="light" className="fondoblanco ">
+      <Nav className="mr-auto ml-5 font-face">
       <Nav.Link href="#Shop">Home</Nav.Link>
         <Nav.Link href="#Shop">Shop</Nav.Link>
         <Nav.Link href="#New-Arrivals">New Arrivals</Nav.Link>

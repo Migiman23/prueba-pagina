@@ -22,9 +22,9 @@ const SearchBar: React.FunctionComponent<ISearchBar> = (props) => {
           Company
         </h1>
       </Navbar.Brand>
-      <Nav className="mr-auto ml-5">
+      <Nav className="mr-auto ml-5 font-face">
           <Form inline>
-          <FormControl type="text" placeholder="Search fro entire store..." className="mr-sm-2 content-fluid" />
+          <FormControl type="text" placeholder="Search from entire store..." className="mr-sm-2 content-fluid" />
           <NavDropdown title="All Categories" id="collasible-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Category 1</NavDropdown.Item>
           </NavDropdown>
@@ -34,7 +34,7 @@ const SearchBar: React.FunctionComponent<ISearchBar> = (props) => {
           </Form>
       </Nav>
 
-          <Nav className="mr-auto">
+          <Nav className="mr-auto font-face">
           <Form inline>
           <FontAwesomeIcon icon={faHeart} size="lg" className="ml-5"/>&nbsp;
           <NavDropdown title="WishList" id="collasible-nav-dropdown">

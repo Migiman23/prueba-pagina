@@ -11,7 +11,7 @@ export interface ISearchBar extends StateProps, DispatchProps {}
 const Gallery1: React.FunctionComponent<ISearchBar> = (props) => {
   return (
     <div>
-      <div className="row">
+      <div className="row d-flex align-items-stretch">
         <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 mb-4 ">
           <Card className="bg-dark text-white">
             <Card.Img src={img2} className="imgXs" alt="Card image" />
